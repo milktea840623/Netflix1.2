@@ -35,12 +35,12 @@
     text-decoration: none;
 }
 
-.user-options {
+.userOptions {
     display: flex;
     gap: 15px; /* 增加選項之間的間距 */
 }
 
-.user-options a {
+.userOptions a {
     color: white;
     text-decoration: none;
 }
