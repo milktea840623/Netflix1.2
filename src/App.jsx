@@ -21,12 +21,15 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <Header /> */}
-      {/* 其他內容 */}
-      <div style={{ height: '2000px' }}> {/* 模擬長內容以測試滾動效果 */}
+      <div>
+        <h1>取得手機遊戲</h1>
+      </div>
+      
+      <div style={{ height: '2000px' }}> 
         滾動以查看效果
       </div>
     </div>
+
   );
 }
 

@@ -9,5 +9,6 @@ createRoot(document.getElementById('root')).render(
     <div>Test</div>
     <div>IAN Test</div>
     <div>IAN Test 2</div>
+    <div>2/20 test</div>
   </StrictMode>,
 )
