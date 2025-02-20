@@ -10,5 +10,6 @@ createRoot(document.getElementById('root')).render(
     <div>IAN Test</div>
     <div>IAN Test 2</div>
     <div>2/20 test</div>
+    <div>test git</div>
   </StrictMode>,
 )
