@@ -1,9 +1,26 @@
-import React from 'react';
-import style from './Header.module.css'; // 假設你有一個CSS檔案來處理樣式
+import React, { useState, useEffect } from 'react';
+import style from './Header.module.css';
 
 function Header() {
-    return(
-        <header className={style.header}>
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            console.log(window.scrollY)
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    return (
+        <header className={`${style.header} ${isScrolled ? style.scrolled : ''}`}>
             <div className={style.logo}>
                 <a href="#home">Netflix</a>
             </div>
@@ -22,6 +39,7 @@ function Header() {
                 <a href="#profile">個人資料</a>
             </div>
         </header>
-    )
+    );
 }
+
 export default Header;
