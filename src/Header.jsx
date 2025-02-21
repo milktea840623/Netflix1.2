@@ -19,7 +19,7 @@ function Header() {
             <div className={style.userOptions}>
                 <a href="#search">搜尋</a>
                 <a href="#notifications">通知</a>
-                <a href="#profile">個人資料</a>
+                <a href="#profile">個人資ddd料</a>
             </div>
         </header>
     )
