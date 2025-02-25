@@ -1,0 +1,88 @@
+.dailyBest{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin:3vh;
+    padding: 0;
+}
+
+.dailyBestExpBlock{
+    display: flex;
+}
+
+/* .dailyBestMovieList{
+    display: flex;
+    margin-left: 10px;
+} */
+
+a{
+    text-decoration: none;
+}
+.dailyBestComBlock {
+    background-color: rgba(0, 0, 0, 0.0001);
+    color: white;
+    border: none;
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+    font-size: 24px;
+    
+}
+
+.recommendation {
+    width: 20%;
+    height: 10%;
+    bottom: 10%;
+    left: 1%;
+    color: white;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+}
+
+.rightArrowBlock {
+    height: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.rightArrow {
+    width: 20px;
+    height: 20px;
+    background: url('./assets/image/right-arrow.png') no-repeat center;
+    background-size: contain;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.exploreButton {
+    transition: width 0.6s ease, opacity 0.6s;
+    opacity: 0;
+    transform: translateX(0);
+    width:0px;
+    white-space: nowrap;
+    font-size: 14px;
+    margin-left: 10px;
+    color:aquamarine;
+    text-align: center;
+}
+
+.dailyBestExpBlock:hover .rightArrow {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+}
+
+.rightArrow:hover + .exploreButton,
+.rightArrowBlock:hover .exploreButton {
+    opacity: 1;
+    width:70px;
+}
+
+.dailyBestComButton:hover ~ .rightArrow,
+.dailyBestComButton:hover ~ .exploreButton {
+    opacity: 1;
+    transform: translateX(10px);
+    display: block;
+}
+
