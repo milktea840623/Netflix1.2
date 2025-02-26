@@ -1,0 +1,12 @@
+.slideImage {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.slideImage:hover {
+    transform: scale(1.5);
+    /* 悬停时放大 */
+}

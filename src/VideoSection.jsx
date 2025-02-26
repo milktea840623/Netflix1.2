@@ -50,12 +50,7 @@ const VideoSection = () => {
               更多資訊
             </button>
           </div>
-        </div>
-        <div className={style.recommendation}>
-          <button className={style.dailyBestComButton}>本日最佳推薦</button>
-          <div className={style.rightArrow}></div>
-          <div className={style.exploreButton}>探索全部</div>
-        </div>
+        </div>        
         <div className={style.RBButtonBlock}>
           <div className={style.buttonBlock}>
             <button className={`${style.button} ${style.muteButton}`} onClick={toggleMute}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header.jsx'
 import VideoSection from './VideoSection.jsx';
-import style from './App.module.css'
+import Best from './Best.jsx';
 
 function App() {
 
@@ -9,6 +9,7 @@ function App() {
     <div>
       <Header />
       <VideoSection />
+      <Best />
     </div>
   );
 }
