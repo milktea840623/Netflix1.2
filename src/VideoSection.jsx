@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import style from './VideoSection.module.css'
-import ClickIconMedia from './assets/image/play_pause_icon_137298.png';
-import ClickIconMoreInfo from './assets/image/infor sign.png';
-import ClickIconMute from './assets/image/mute_106517.png';
-import ClickIconUnmute from './assets/image/sound.png';
-import ClickIconRightArrow from './assets/image/right-arrow.png';
+import ClickIconMedia from '/public/image/play_pause_icon_137298.png';
+import ClickIconMoreInfo from '/public/image/infor sign.png';
+import ClickIconMute from '/public/image/mute_106517.png';
+import ClickIconUnmute from '/public/image/sound.png';
+import ClickIconRightArrow from '/public/image/right-arrow.png';
 
 const VideoSection = () => {
   const videoRef = useRef(null);
@@ -37,7 +37,7 @@ const VideoSection = () => {
       </div>
       <div className={style.overlay}>
         <div className={style.textBlock}>
-          <h1>🍕 美味時刻</h1>
+          <h1 className={style.title}>🍕 美味時刻</h1>
           <h4>誘人的起司拉絲，每一口都是幸福的滋味！</h4>
           <p>新鮮出爐的披薩，酥脆外皮搭配濃郁起司與豐富配料，香氣四溢，每一片都是完美享受。<br />無論是派對、聚會還是獨享時光，這一刻就該好好品味！🍕✨</p>
           <div className={style.moreInfoBlock}>

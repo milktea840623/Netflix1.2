@@ -1,11 +1,11 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: gray;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100dvh;
+  background-color: black;
 }
 
