@@ -45,12 +45,14 @@ const VideoSection = () => {
               <img src={ClickIconMedia} alt="播放圖示" className={style.iconMedia} />
               {isPlaying ? '播放' : '暫停'}
             </button>
-            <button className={`${style.button} ${style.moreInfoButton}`}>
-              <img src={ClickIconMoreInfo} alt="更多資訊圖示" className={style.iconMoreInfo} />
-              更多資訊
-            </button>
+            <a href="#MoreInformation" className={style.moreInfolink}>
+              <button className={`${style.button} ${style.moreInfoButton}`}>
+                <img src={ClickIconMoreInfo} alt="更多資訊圖示" className={style.iconMoreInfo} />
+                更多資訊
+              </button>
+            </a>
           </div>
-        </div>        
+        </div>
         <div className={style.RBButtonBlock}>
           <div className={style.buttonBlock}>
             <button className={`${style.button} ${style.muteButton}`} onClick={toggleMute}>

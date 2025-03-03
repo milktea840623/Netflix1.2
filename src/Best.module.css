@@ -12,6 +12,11 @@
 a{
     text-decoration: none;
 }
+
+.dailyBestExpBlock{
+    margin-bottom: 20px;
+}
+
 .dailyBestComBlock {
     background-color: rgba(0, 0, 0, 0.0001);
     color: white;
@@ -38,6 +43,7 @@ a{
     display: flex;
     position: relative;
     align-items: center;
+
 }
 
 .rightArrow {

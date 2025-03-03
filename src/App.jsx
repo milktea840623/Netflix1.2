@@ -8,8 +8,8 @@ function App() {
   const images = [
     'public/image/Arise.jpg',
     'public/image/Dcat.jpg',
-    'public/image/Ddd.jpg',
     'public/image/Xgll.jpg',
+    'public/image/Ddd.jpg',
   ]
 
   const imagesHistory = [
@@ -20,10 +20,10 @@ function App() {
   ]
 
   const imagesJpAnime = [
-    'public/image/Shop.jpg',
     'public/image/Shin.jpg',
     'public/image/Knife.jpg',
     'public/image/Hero.jpg',
+    'public/image/Shop.jpg',
   ]
   return (
     <div>
