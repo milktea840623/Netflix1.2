@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import style from './Header.module.css';
-import SearchIcon from '/public/image/search.png';
-import BellIcon from '/public/image/bell.png';
-import UserIcon from '/public/image/user.png';
-import UploadIcon from '/public/image/upload.png';
 
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,15 +36,15 @@ function Header() {
             </nav>
             <div className={style.userOptions}>
                 <a href="#search">
-                    <img src={SearchIcon} alt="搜尋圖示" className={style.iconSearch} />
+                    <img src="/image/search.png" alt="搜尋圖示" className={style.iconSearch} />
                 </a>
-                <a 
-                    href="#notifications" 
+                <a
+                    href="#notifications"
                     className={style.bellIconBlock}
                     onMouseEnter={() => setShowBellMenu(true)}
                     onMouseLeave={() => setShowBellMenu(false)}
                 >
-                    <img src={BellIcon} alt="通知圖示" className={style.iconBell} />
+                    <img src="/image/bell.png" alt="通知圖示" className={style.iconBell} />
                     {showBellMenu && (
                         <ul className={style.dropdownMenuBell}>
                             {/* 漢堡選單內容 */}
@@ -57,22 +53,33 @@ function Header() {
                         </ul>
                     )}
                 </a>
-                <a 
-                    href="#profile" 
+                <a
+                    href="#profile"
                     className={style.userIconBlock}
                     onMouseEnter={() => setShowUserMenu(true)}
                     onMouseLeave={() => setShowUserMenu(false)}
                 >
-                    <img src={UserIcon} alt="用戶切換圖示" className={style.iconUser} />
-                    <img 
-                        src={UploadIcon} 
-                        alt="小箭頭" 
-                        className={`${style.iconUpload} ${showUserMenu ? style.iconUploadRotated : ''}`} 
+                    <img src="/image/user.png" alt="用戶切換圖示" className={style.iconUser} />
+                    <img
+                        src="/image/down.png"
+                        alt="小箭頭"
+                        className={`${style.iconUpload} ${showUserMenu ? style.iconUploadRotated : ''}`}
                     />
                     {showUserMenu && (
                         <ul className={style.dropdownMenuUser}>
-                            <li>000</li>
-                            <li>登出</li>
+                            <div className={style.userNameList}>
+                                <li>Ian</li>
+                                <li>Milktea</li>
+                            </div>
+                            <div className={style.userManageMenu}>
+                                <li>管理使用者</li>
+                                <li>轉移使用者</li>
+                                <li>帳戶</li>
+                                <li>說明中心</li>
+                            </div>
+                            <div className={style.userLogout}>
+                                <li>登出 Netflix</li>
+                            </div>
                         </ul>
                     )}
                 </a>

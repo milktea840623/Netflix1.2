@@ -77,13 +77,19 @@
 .dropdownMenuBell, .dropdownMenuUser {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     background-color: black;
     color: white;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
+    z-index: 2;
     display: none;
+    box-sizing: border-box;
+    width: 200px; 
+    font-size: 14px;
+    list-style-type: none; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .bellIconBlock:hover .dropdownMenuBell,

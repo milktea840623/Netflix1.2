@@ -6,24 +6,36 @@ import Best from './Best.jsx';
 function App() {
 
   const images = [
-    'public/image/Arise.jpg',
-    'public/image/Dcat.jpg',
-    'public/image/Xgll.jpg',
-    'public/image/Ddd.jpg',
+    'image/Arise.jpg',
+    'image/Dcat.jpg',
+    'image/Xgll.jpg',
+    'image/Ddd.jpg',
+    'image/Arise.jpg',
+    'image/Dcat.jpg',
+    'image/Xgll.jpg',
+    'image/Ddd.jpg',
   ]
 
   const imagesHistory = [
-    'public/image/OnePiece.jpg',
-    'public/image/Naruto.jpeg',
-    'public/image/Digimon.jpg',
-    'public/image/Pokemon.jpg',
+    'image/OnePiece.jpg',
+    'image/Naruto.jpeg',
+    'image/Digimon.jpg',
+    'image/Pokemon.jpg',
+    'image/OnePiece.jpg',
+    'image/Naruto.jpeg',
+    'image/Digimon.jpg',
+    'image/Pokemon.jpg',
   ]
 
   const imagesJpAnime = [
-    'public/image/Shin.jpg',
-    'public/image/Knife.jpg',
-    'public/image/Hero.jpg',
-    'public/image/Shop.jpg',
+    'image/Shin.jpg',
+    'image/Knife.jpg',
+    'image/Hero.jpg',
+    'image/Shop.jpg',
+    'image/Shin.jpg',
+    'image/Knife.jpg',
+    'image/Hero.jpg',
+    'image/Shop.jpg',
   ]
   return (
     <div>
