@@ -4,9 +4,32 @@
     object-fit: contain;
     border-radius: 8px;
     transition: transform 0.3s;
+    position: relative;
+    /* 确保图片相对定位 */
 }
 
+
+/* .SwiperSlide:first-child .slideImage {
+    transform-origin: left;
+}
+
+.SwiperSlide:last-child .slideImage {
+    transform-origin: right;
+} */
+
 .slideImage:hover {
-    transform: scale(1.5);
-    /* 悬停时放大 */
+    transform: scale(5);
+    z-index: 2;
+    transform-origin: bottom;
+}
+
+.pageIndicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 20;
 }
