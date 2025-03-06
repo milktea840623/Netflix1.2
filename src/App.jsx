@@ -17,11 +17,11 @@ function App() {
   ]
 
   const imagesHistory = [
-    'image/OnePiece.jpg',
+    'image/Onepiece.jpg',
     'image/Naruto.jpeg',
     'image/Digimon.jpg',
     'image/Pokemon.jpg',
-    'image/OnePiece.jpg',
+    'image/Onepiece.jpg',
     'image/Naruto.jpeg',
     'image/Digimon.jpg',
     'image/Pokemon.jpg',
