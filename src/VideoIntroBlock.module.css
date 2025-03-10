@@ -1,0 +1,41 @@
+.videoIntroBlock {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.videoPlayPauseButton {
+    background-color: white;
+    color: black;
+
+}
+
+.videoMoreInfoButton {
+    left: 20px;
+    gap: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.videoPlayPauseButtonIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.videoMoreInfoButtonIcon {
+    width: 20px;
+    height: 20px;
+}

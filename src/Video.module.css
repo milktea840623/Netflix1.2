@@ -1,0 +1,33 @@
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    object-fit: hidden;
+}
+
+.videoIntroduction{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+}
+
+.videoIntroTitle{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.videoIntroSubtitle{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.videoIntroDescription{
+    font-size: 15px;
+}
+
+
