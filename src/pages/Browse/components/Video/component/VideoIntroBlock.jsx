@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './VideoIntroBlock.module.css'
+import Style from './style/VideoIntroBlock.module.css'
 
 const VideoIntroBlock = ({ isPlaying, togglePlayPause }) => {
 

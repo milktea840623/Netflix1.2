@@ -1,6 +1,6 @@
 import style from './Video.module.css'
-import VideoIntroBlock from './VideoIntroBlock.jsx'
-import VideoSoundBlock from './VideoSoundBlock.jsx'
+import VideoIntroBlock from './component/VideoIntroBlock.jsx'
+import VideoSoundBlock from './component/VideoSoundBlock.jsx'
 import { useRef, useState } from 'react'
 
 const VideoSection = () => {

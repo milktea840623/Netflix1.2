@@ -1,8 +1,8 @@
-import Style from './MainHeader.module.css';
+import Style from './Header.module.css';
 import {useState,useEffect} from 'react'
 
 
-const MainHeader = () =>{
+const Header = () =>{
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(()=>{
@@ -20,7 +20,7 @@ const MainHeader = () =>{
         };
     },[]);
     return(
-        <header className={`${Style.mainHeader} ${isScrolled ? Style.scrolled : ''}`}>
+        <header className={`${Style.Header} ${isScrolled ? Style.scrolled : ''}`}>
             <div className={Style.logo}>
                 <a href="#home" className={Style.logoText}>Netflix</a>
             </div>
@@ -48,4 +48,4 @@ const MainHeader = () =>{
         </header>
     )
 }
-export default MainHeader;
+export default Header;

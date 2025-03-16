@@ -1,4 +1,4 @@
-import style from './VideoSoundBlock.module.css'
+import style from './style/VideoSoundBlock.module.css'
 
 const VideoSoundBlock = ({isMuted,toggleMute}) => {
 
