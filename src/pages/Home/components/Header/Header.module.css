@@ -21,35 +21,82 @@
 }
 
 .languageBlock {
+    position: relative;
     display: flex;
     align-items: center;
     margin-right: 20px;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 16px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 4px 8px;
+}
+
+.languageBlock:focus-within {
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.languageIconBlock {
+    position: absolute;
+    left: 8px;
+    pointer-events: none;
 }
 
 .languageIcon {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+    width: 16px;
+    height: 16px;
 }
 
-.languageSelect{
-background: transparent;
+.languageSelect {
+    appearance: none;
+    background: transparent;
     border: none;
     color: white;
-    padding: 5px 10px;
-} 
+    padding: 4px 32px 4px 32px;
+    font-size: 14px;
+    outline: none;
+}
 
-.logoutButton{
+.languageSelect:focus {
+    outline: none;
+}
+
+.arrowIcon {
+    position: absolute;
+    right: 8px;
+    pointer-events: none;
+    color: white;
+}
+
+.loginButton {
     background-color: white;
     color: black;
     font-size: 16px;
     padding: 5px 10px;
     border-radius: 20px;
-    cursor: pointer
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 設定連結的各種狀態樣式 */
+.loginButton:link,      /* 未訪問的連結 */
+.loginButton:visited {  /* 已訪問的連結 */
+    color: black;
+}
+
+.loginButton:hover {    /* 滑鼠懸停 */
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.loginButton:active {   /* 點擊時 */
+    background-color: rgba(255, 255, 255, 0.7);
 }
