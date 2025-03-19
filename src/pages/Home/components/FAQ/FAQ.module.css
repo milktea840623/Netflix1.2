@@ -1,0 +1,50 @@
+.faqTitle {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.faqContent {
+   background-color: black;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.faqItem {
+    margin-bottom: 10px;
+}
+
+.faqQuestion {
+    width: 100%;
+    padding: 1rem;
+    background-color: #444;
+    color: white;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 20px;
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #555;
+    color: white;
+    padding: 0 15px;
+    border-radius: 20px;
+    border:none;
+}
+
+.faqAnswer.active {
+    max-height: 200px;
+    padding: 15px;
+}
+
+.icon {
+    font-size: 24px;
+}

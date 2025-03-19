@@ -1,0 +1,176 @@
+.registerBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.registerFormTitle {
+    font-size:16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.registerFormInputBlock {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.inputWrapper {
+    position: relative;
+    flex: 1;
+}
+
+.registerFormInput {
+    width: 100%;
+    padding: 24px 16px 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+}
+
+/* 浮動標籤 */
+.inputLabel {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    transition: all 0.15s ease;
+    pointer-events: none;
+}
+
+/* 當輸入框獲得焦點或有內容時，標籤上移 */
+.registerFormInput:focus + .inputLabel,
+.registerFormInput:not(:placeholder-shown) + .inputLabel {
+    top: 8px;
+    font-size: 12px;
+    transform: none;
+}
+
+/* 錯誤狀態 */
+.registerFormInput.error {
+    border-color:  red;
+}
+
+/* 錯誤訊息 */
+.errorMessage {
+    position: absolute;
+    left: 4px;
+    bottom: -20px;
+    color: red;
+    font-size: 13px;
+    text-align: left;
+}
+
+.registerButton {
+    background: #e50914;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 8px;
+    min-height: 70px;
+}
+
+.contactUs {
+    margin-right: 20px;
+    width: 150px;
+}
+
+.information {
+    margin-right: 20px;
+}
+
+
+.language {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 4px 8px;
+    max-width: 120px;
+}
+
+.language:focus-within {
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.languageIconBlock {
+    position: absolute;
+    left: 8px;
+    pointer-events: none;
+}
+
+.languageIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.languageSelect {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 4px 32px 4px 32px;
+    font-size: 14px;
+    outline: none;
+}
+
+.languageSelect:focus {
+    outline: none;
+}
+
+.arrowIcon {
+    position: absolute;
+    right: 8px;
+    pointer-events: none;
+    color: white;
+}
+
+.loginButton {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 設定連結的各種狀態樣式 */
+.loginButton:link,      /* 未訪問的連結 */
+.loginButton:visited {  /* 已訪問的連結 */
+    color: black;
+}
+
+.loginButton:hover {    /* 滑鼠懸停 */
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.loginButton:active {   /* 點擊時 */
+    background-color: rgba(255, 255, 255, 0.7);
+}
