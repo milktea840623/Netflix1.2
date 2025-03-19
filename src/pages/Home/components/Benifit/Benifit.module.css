@@ -1,0 +1,47 @@
+.benifit {
+    padding: 40px 20px;
+    background-color: #141414;
+    color: white;
+    text-align: center;
+}
+
+.benifitTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.benifitContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.benifitItem {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.benifitItemTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.benifitItemDescription {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.benifitItemImage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+

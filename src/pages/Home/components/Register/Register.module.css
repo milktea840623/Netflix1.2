@@ -1,7 +1,17 @@
 .register {
     position: relative;
     width:100%;
+    max-width: 1800px; 
+    margin: 0 auto; 
     text-align: center;
+    min-height: 100vh;
+    background-image: url('/image/BackgroundImg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px; 
 }
 
 /* 添加漸層陰影覆蓋層 */
@@ -19,6 +29,13 @@
         rgba(0, 0, 0, 0.8) 100%
     );
     z-index: 1;
+    border-radius: 10px; 
+}
+.registerWrapper {
+    width: 100%;
+    padding: 0 50px; /* 添加左右間距 */
+    box-sizing: border-box;
+    background-color: black; /* 確保背景是黑色 */
 }
 
 .registerContainer {
@@ -26,35 +43,109 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     z-index: 2;
+    width: 100%;
+    max-width: 45%; 
+    padding: 75px 0;
+    color: white;
 }
 
 .monthlyFee {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
+    margin-bottom: 30px;
     }
 
 .monthlyFeeTitle {
-    font-size: 58px;
+    font-size: clamp(24px, 5vw, 60px);
     font-weight: bold;
 }
 
 .monthlyFeeDescription {
-    font-size: 16px;
+    font-size: 24px;
+    margin: 16px 0;
+    font-weight: 400;
 }
-
-
 
 .registerBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.registerFormTitle {
+    font-size:16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.registerFormInputBlock {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.inputWrapper {
+    position: relative;
+    flex: 1;
+}
+
+.registerFormInput {
+    width: 100%;
+    padding: 24px 16px 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+}
+
+/* 浮動標籤 */
+.inputLabel {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    transition: all 0.15s ease;
+    pointer-events: none;
+}
+
+/* 當輸入框獲得焦點或有內容時，標籤上移 */
+.registerFormInput:focus + .inputLabel,
+.registerFormInput:not(:placeholder-shown) + .inputLabel {
+    top: 8px;
+    font-size: 12px;
+    transform: none;
+}
+
+/* 錯誤狀態 */
+.registerFormInput.error {
+    border-color:  red;
+}
+
+/* 錯誤訊息 */
+.errorMessage {
+    position: absolute;
+    left: 4px;
+    bottom: -20px;
+    color: red;
+    font-size: 13px;
+    text-align: left;
+}
+
+.registerButton {
+    background: #e50914;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 8px;
+    min-height: 70px;
 }

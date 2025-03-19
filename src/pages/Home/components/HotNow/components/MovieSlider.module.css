@@ -1,0 +1,26 @@
+.movieSliderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+    
+}
+.movieSliderImage:hover {
+    transform: scale(1.5);
+    z-index: 2;
+    transform-origin: center;
+}
+
+.pageIndicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 20;
+}
