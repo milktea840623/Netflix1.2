@@ -1,12 +1,10 @@
 .hotNow {
-    padding: 20px;
     color: white;
 }
 
 .hotNowTitle {
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-left: 4%;
+    font-size: 1rem;
+    margin-bottom: 20px;   
 }
 
 .hotNowContent {

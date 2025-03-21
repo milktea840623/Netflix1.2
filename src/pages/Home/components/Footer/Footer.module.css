@@ -1,30 +1,61 @@
-.registerBlock {
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: #000;
+}
+
+.register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.registerForm {
+    width: 100%;
+    max-width: 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 950px;
     margin: 0 auto;
 }
 
 .registerFormTitle {
-    font-size:16px;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     font-weight: 400;
     text-align: center;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
 }
 
 .registerFormInputBlock {
     position: relative;
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .inputWrapper {
     position: relative;
     flex: 1;
+    max-width: 500px;
+    min-width: 250px;
 }
 
 .registerFormInput {
@@ -35,6 +66,7 @@
     border-radius: 50px;
     color: white;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 /* 浮動標籤 */
@@ -72,56 +104,80 @@
 }
 
 .registerButton {
+    height: 60px;
+    padding: 0 26px;
     background: #e50914;
     color: white;
-    padding: 20px 40px;
     font-size: 24px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 183px;
+    flex-shrink: 0; /* 防止按鈕被壓縮 */
+    white-space: nowrap; /* 防止文字換行 */
+}
+
+.registerButton::after {
+    content: '›';
     margin-left: 8px;
-    min-height: 70px;
+    font-size: 30px;
+    line-height: 1;
 }
 
 .contactUs {
-    margin-right: 20px;
-    width: 150px;
+    width: 40%;
+    max-width: 950px;
+    margin: 30px 0 15px;
+    text-align: left;
+}
+
+.contactUs h5 {
+    color: #737373;
+    font-size: 16px; 
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+}
+
+.contactUs a {
+    color: #737373; 
+    text-decoration-color: white; 
 }
 
 .information {
-    margin-right: 20px;
-}
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
 
+}
 
 .language {
     position: relative;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    margin: 0 auto 0 4%;
+    background: transparent;
+    color: #737373;
     font-size: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    padding: 4px 8px;
+    border: 1px solid #737373;
+    border-radius: 2px;
+    padding: 0;
     max-width: 120px;
-}
-
-.language:focus-within {
-    border: 3px solid white;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    align-self: flex-start;
 }
 
 .selectWrapper {
     position: relative;
     display: flex;
     align-items: center;
+    padding: 4px 20px 4px 10px;
 }
 
 .languageIconBlock {
-    position: absolute;
-    left: 8px;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
 }
 
 .languageIcon {
@@ -133,21 +189,17 @@
     appearance: none;
     background: transparent;
     border: none;
-    color: white;
-    padding: 4px 32px 4px 32px;
-    font-size: 14px;
-    outline: none;
-}
-
-.languageSelect:focus {
+    color: #737373;
+    padding: 4px 0;
+    font-size: 16px; 
     outline: none;
 }
 
 .arrowIcon {
     position: absolute;
-    right: 8px;
+    right: 10px;
     pointer-events: none;
-    color: white;
+    color: #737373;
 }
 
 .loginButton {
@@ -173,4 +225,76 @@
 
 .loginButton:active {   /* 點擊時 */
     background-color: rgba(255, 255, 255, 0.7);
+}
+
+.footerButton {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.footerButton li {
+    text-align: left;
+}
+
+.footerButton li button {
+    background: none;
+    border: none;
+    color: #737373;
+    font-size: 16px; 
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+}
+
+.footerButton li button:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+/* 來源聲明樣式 */
+.source {
+    width: 100%;
+    max-width: 950px;
+    margin: 20px 0 0 0;
+    padding: 0 4%;
+    text-align: left;
+}
+
+.source h6 {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 940px) {
+    .footerButton {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .footerButton {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .registerFormInputBlock {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .inputWrapper {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .registerButton {
+        width: 100%;
+    }
 }

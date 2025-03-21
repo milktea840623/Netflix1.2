@@ -4,7 +4,7 @@ import Style from './HotNow.module.css';
 const HotNow = () => {
     return (
         <div className={Style.hotNow}>
-            <div className={Style.hotNowTittle}>
+            <div className={Style.hotNowTitle}>
                 <h1>現正熱播</h1>
             </div>
             <div className={Style.hotNowContent}>

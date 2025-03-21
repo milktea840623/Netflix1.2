@@ -5,8 +5,8 @@ const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const QA=[
         {
-            question: '什麼是Netflix？',
-            answer: `Netflix是一個提供電影、電視節目和動漫的串流平台。
+            question: 'Netflix是什麼？',
+            answer: `Netflix是串流服務，透過數千種可連結網路的行動裝置，提供各種獲獎肯定的節目、電影、動畫、紀錄片等精彩內容。
             
             只要支付一筆經濟實惠的月費，就能隨時隨地，盡情觀賞，毫無廣告。時時都有新的內容供您探索，而且每星期都會加入新的目與電影！`
         },
@@ -54,7 +54,7 @@ const FAQ = () => {
                             <span className={Style.icon}>{activeIndex === index ? '✕' : '+'}</span>
                         </button>
                         <div className={`${Style.faqAnswer} ${activeIndex === index ? Style.active : ''}`}>
-                            <p>{item.answer}</p>
+                            <p className={Style.faqAnswerText}>{item.answer}</p>
                         </div>
                     </div>
                 ))}

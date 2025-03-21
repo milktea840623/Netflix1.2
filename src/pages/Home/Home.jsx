@@ -9,15 +9,17 @@ import Footer from './components/Footer/Footer.jsx';
 const Home = () => {
   return (
     <div>
-      <div className={styles.homeTopPart}>
-      <Header />
-      <Register />
+      <div className={styles.topPart}>
+        <Header />
       </div>
-      <div className={styles.homeLowerPart}>
-      <HotNow />
-      <Benifit />
-      <FAQ />
-      <Footer />
+      <div className={styles.middlePart}>
+        <Register />
+        <HotNow />
+        <Benifit />
+        <FAQ />
+      </div>
+      <div className={styles.lowerPart}>
+        <Footer />
       </div>
     </div>
   );

@@ -44,11 +44,9 @@
 .numberBadge {
     position: absolute;
     width: 40px;
-    height: 40px;
     font-size: 72px;
     font-weight: bold;
-    border-radius: 50%;
-    z-index: 3;
+    z-index: 2;
     color: rgba(0, 0, 0, 0.8);
     -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
     text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
@@ -65,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .modalContent {
@@ -94,7 +92,7 @@
     font-size: 24px;
     cursor: pointer;
     padding: 5px;
-    z-index: 1001;
+    z-index: 2;
 }
 
 .modalTitle {
@@ -127,5 +125,5 @@
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    z-index: 20;
+    z-index: 2;
 }

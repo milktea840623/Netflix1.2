@@ -1,18 +1,32 @@
+
+.headerContainer {
+    padding: 0 2.25rem;
+}
+
 .Header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
     background-color: #000; 
+    height: 80px;
+    padding: 0 20px ;
+    padding-top: 15px;
 }
 
+
 .logo {
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
     color: red;
     text-align: center;
+    width: 148px;
+    height: 40px;
+    margin: 0;  /* 移除可能的外邊距 */
+    padding: 0;  /* 移除可能的內邊距 */
+    display: flex;  /* 使用 flexbox 進行對齊 */
+    align-items: center; 
 }
 
 .headerRight {

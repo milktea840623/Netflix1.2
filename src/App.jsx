@@ -7,7 +7,7 @@ import BrowsePage from './pages/Browse/Browse.jsx';
 import MemberPage from './pages/Member/Member.jsx';
 import VideoPreviewPage from './pages/VideoPreview/VideoPreview.jsx';
 import VideoPlayerPage from './pages/VideoPlayer/VideoPlayer.jsx';
-
+import RegisterPage from './pages/Register/Register.jsx';
 
 
 const App =() => {
@@ -15,6 +15,7 @@ const App =() => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />}/>
+        <Route path="/register" element={<RegisterPage />}/>
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/Browse" element={<BrowsePage />} />
         <Route path="/member" element={<MemberPage />} />
