@@ -1,0 +1,58 @@
+.movieCard {
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+  transition: transform 0.2s ease;
+}
+
+.movieCard:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.movieCard:hover .movieSliderImage {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.numberBadge {
+  position: absolute;
+  font-weight: bold;
+  color: black;
+  font-size: 5rem;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
+  user-select: none;
+  pointer-events: none;
+  -webkit-text-stroke: 2px white;
+}
+
+.movieSliderImage {
+  width: 131px;
+  height: 262px;
+  border-radius: 25px;
+  display: block;
+  aspect-ratio: 2/3;
+
+}
+
+/* 響應式調整 */
+@media (max-width: 1280px) {
+  .numberBadge {
+    font-size: 4rem;
+  }
+  .movieSliderImage {
+    width: 128px;
+    height: 256px;
+  }
+}
+
+@media (max-width: 960px) {
+  .numberBadge {
+    font-size: 2rem;
+  }
+  .movieSliderImage {
+    width: 104px;
+    height: 208px;
+  }
+}

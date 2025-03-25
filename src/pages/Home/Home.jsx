@@ -11,9 +11,10 @@ const Home = () => {
     <div>
       <div className={styles.topPart}>
         <Header />
+        <Register />
       </div>
       <div className={styles.middlePart}>
-        <Register />
+       
         <HotNow />
         <Benifit />
         <FAQ />

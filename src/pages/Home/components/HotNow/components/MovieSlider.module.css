@@ -1,18 +1,26 @@
 .sliderContainer {
     position: relative;
     width: 100%;
-    padding: 20px 0;
-    overflow: visible;
+    padding: 0 4%;
+    margin-bottom: 30px;
+}
+
+.sliderTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .movieSwiper {
-    padding: 0 10%;
+    overflow: visible;
+    padding: 20px 0;
 }
 
 .movieSliderItem {
     transition: transform 0.3s ease;
     overflow: visible;
-    
+    width: auto;
 }
 
 .imageButton {
@@ -101,21 +109,39 @@
     text-align: center;
 }
 
-/* 自定義 Swiper 導航按鈕 */
+/* Swiper 導航按鈕樣式 */
 :global(.swiper-button-prev),
 :global(.swiper-button-next) {
-    width: 40px;
+    width: 50px;
     height: 100%;
-    top: 0;
-    margin-top: 0;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-:global(.swiper-button-prev:hover),
-:global(.swiper-button-next:hover) {
-    background-color: rgba(0, 0, 0, 0.8);
+:global(.swiper-button-disabled) {
+    display: none !important;
 }
+
+.sliderContainer:hover :global(.swiper-button-prev),
+.sliderContainer:hover :global(.swiper-button-next) {
+    opacity: 1;
+}
+
+:global(.swiper-button-prev:after),
+:global(.swiper-button-next:after) {
+    font-size: 1.5rem;
+}
+
+/* 斷點響應式樣式 */
+@media (max-width: 1280px) {
+    :global(.swiper-button-prev),
+    :global(.swiper-button-next) {
+        width: 30px;
+    }
+}
+
 
 .pageIndicator {
     position: absolute;

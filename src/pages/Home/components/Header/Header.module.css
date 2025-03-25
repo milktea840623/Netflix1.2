@@ -1,6 +1,6 @@
 
 .headerContainer {
-    padding: 0 2.25rem;
+    padding: 0 3rem;
 }
 
 .Header {
@@ -11,8 +11,8 @@
     box-sizing: border-box;
     background-color: #000; 
     height: 80px;
-    padding: 0 20px ;
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -27,6 +27,17 @@
     padding: 0;  /* 移除可能的內邊距 */
     display: flex;  /* 使用 flexbox 進行對齊 */
     align-items: center; 
+    position: relative;
+}
+
+.logoText {
+    display: block; /* 默認顯示文字 */
+}
+
+.logoImage {
+    display: none; /* 默認隱藏圖片 */
+    width: 48px;
+    height: 48px;
 }
 
 .headerRight {
@@ -38,7 +49,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 13px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 16px;
@@ -77,6 +88,16 @@
     padding: 4px 32px 4px 32px;
     font-size: 14px;
     outline: none;
+    position: absolute; /* 使其不占空間但仍能被選中 */
+    opacity: 0; /* 隱藏但仍可操作 */
+}
+
+.selectedLanguage {
+    color: white;
+    font-size: 14px;
+    padding: 1px 14px;
+    margin-left: 16px; /* 為 icon 留空間 */
+    margin-right: 36px; /* 為箭頭留空間 */
 }
 
 .languageSelect:focus {
@@ -93,9 +114,10 @@
 .loginButton {
     background-color: white;
     color: black;
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 17px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -113,4 +135,62 @@
 
 .loginButton:active {   /* 點擊時 */
     background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1280px) {
+    .headerContainer {
+        padding: 0 2.25rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .headerContainer {
+        padding: 0 1rem;
+    }
+    
+    .logoText {
+        display: none; /* 隱藏文字 */
+    }
+    
+    .logoImage {
+        display: block; /* 顯示圖片 */
+    }
+}
+
+@media (max-width: 600px) {
+    .headerContainer {
+        padding: 0 1.5rem;
+    }
+    
+    .selectedLanguage {
+        display: none; /* 隱藏語言文字 */
+    }
+    
+    .languageBlock {
+        width: 40px; /* 縮小語言選擇區塊的寬度 */
+        padding: 11px; /* 調整內邊距 */
+    }
+    
+    .arrowIcon {
+        right: 4px; /* 調整箭頭位置 */
+    }
+    
+    .loginButton {
+        font-size: 0.875rem; /* 調整登入按鈕字體 */
+        padding: 5px 16px; /* 調整登入按鈕內邊距 */
+    }
+    .selectWrapper {
+        padding: 4px 24px 4px 20px; /* 調整內邊距 */
+        margin-right: 12px; /* 縮小右邊距 */
+      }
+    
+      .selectWrapper select {
+        font-size: 12px; /* 縮小字體 */
+        padding-right: 8px;
+      }
+    
+      .selectWrapper::after {
+        right: 6px; /* 調整箭頭位置 */
+        font-size: 6px; /* 縮小箭頭大小 */
+      }
 }

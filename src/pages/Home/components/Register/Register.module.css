@@ -1,6 +1,14 @@
+.registerWrapper {
+    width: 100%;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
+
 .register {
     position: relative;
-    width: 100%;
+    width: 93vw ;
     min-height: 80vh; /* 降低高度 */
     background-image: url('/image/BackgroundImg.jpg');
     background-size: cover;
@@ -8,7 +16,7 @@
     background-repeat: no-repeat;
     overflow: hidden;
     text-align: center;
-    border-radius: 10px; 
+    border-radius: 40px; 
 }
 
 /* 添加漸層陰影覆蓋層 */
@@ -28,13 +36,7 @@
     z-index: 1;
     border-radius: 10px; 
 }
-.registerWrapper {
-    width: 100%;
-    padding: 0 20px; /* 添加左右間距 */
-    box-sizing: border-box;
-    width: 100%;
-    overflow: hidden;
-}
+
 
 .registerContainer {
     position: absolute;  
@@ -59,10 +61,10 @@
 }
 
 .monthlyFeeTitle {
-    font-size: 3.5rem; /* 使用較大的固定大小 */
+    font-size: 3.4rem; /* 使用較大的固定大小 */
     font-weight: bold;
-    max-width: 640px; /* 限制寬度，確保換行位置一致 */
-    margin: 0 auto 10px;
+    max-width: 560px; /* 限制寬度，確保換行位置一致 */
+    margin-bottom:0;
     line-height: 1.3; /* 減小行高，使行間距更緊湊 */
     text-align: center;
 }
@@ -80,13 +82,13 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 950px;
+    max-width:560px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .registerFormTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 20px;
     font-weight: 400;
     text-align: center;
@@ -98,6 +100,7 @@
 .registerFormInputBlock {
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -115,6 +118,7 @@
 .registerFormInput {
     width: 100%;
     padding: 24px 16px 8px;
+    height: 60px;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 50px;
@@ -166,6 +170,7 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,4 +184,59 @@
     margin-left: 8px;
     font-size: 30px;
     line-height: 1;
+}
+
+@media (max-width: 1280px) {
+    .register {
+        width: 95vw;
+        min-height: 70vh;
+    }
+    .registerWrapper {
+        padding-left: 30px;
+    }
+    .monthlyFeeTitle {
+        font-size: 3rem;
+        max-width: 576px;
+    }
+    .monthlyFeeDescription {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .registerWrapper {
+        width: 96vw;
+        padding-left: 2rem;
+    }
+    .monthlyFeeTitle {
+        font-size: 2rem;
+        max-width: 384px;
+    }
+    .monthlyFeeDescription {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .monthlyFeeTitle {
+        font-size: 1.5rem;
+        min-width: 432px;
+    }
+
+    .registerFormInputBlock {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .registerFormInput {
+        min-width: 462px;
+    }
+    .registerFormTitle {
+        font-size: 0.875rem;
+    }
+    .registerBlock {
+        padding:0;
+    }
+    .registerButton {
+        min-width: 462px;
+    }
 }

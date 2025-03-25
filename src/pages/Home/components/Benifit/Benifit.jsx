@@ -3,7 +3,7 @@ import Style from './Benifit.module.css';
 
 const benefits =[
     {
-        title: '在電視上觀⁠賞1',
+        title: '在電視上觀⁠賞',
         description: '在智慧型電視、PlayStation、Xbox、Chromecast、Apple TV、藍光播放器等多種裝置上觀賞。',
         image: 'image/bell.png',
         alt: '在電視上觀賞'

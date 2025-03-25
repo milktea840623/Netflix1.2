@@ -2,33 +2,34 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules"
 import Style from './MovieSlider.module.css';
+import MovieModal from './MovieModal.jsx';
+import MovieCard from './MovieCard.jsx';
 import 'swiper/swiper-bundle.css';
 
 const MovieSlider = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
-    
+    const [selectedMovie, setSelectedMovie] = useState(null);
+
     const movies = [
-        { id: 1, path: 'image/girl.jpg', title: '我獨自升級' },
-        { id: 2, path: 'image/Knife.jpg', title: '鬼滅之刃' },
-        { id: 3, path: 'image/Xgll.jpg', title: '香格里拉Ｘ開拓異境' },
-        { id: 4, path: 'image/Shop.jpg', title: '異世界美食家' },
-        { id: 5, path: 'image/Arise.jpg', title: '我獨自升級' },
-        { id: 6, path: 'image/Knife.jpg', title: '鬼滅之刃' },
-        { id: 7, path: 'image/Xgll.jpg', title: '香格里拉Ｘ開拓異境' },
-        { id: 8, path: 'image/Shop.jpg', title: '異世界美食家' },
-        { id: 9, path: 'image/girl.jpg', title: '我獨自升級' },
-        { id: 10, path: 'image/Knife.jpg', title: '鬼滅之刃' },
-        { id: 11, path: 'image/Xgll.jpg', title: '香格里拉Ｘ開拓異境' },
-        { id: 12, path: 'image/Shop.jpg', title: '異世界美食家' },
-        // ... 其他電影
+        { id: 1, path: 'image/home/no1.jpg', title: '我獨自升級' },
+        { id: 2, path: 'image/home/no2.jpg', title: '黑色五葉草' },
+        { id: 3, path: 'image/home/no3.jpg', title: '我的英雄學院' },
+        { id: 4, path: 'image/home/no4.jpg', title: '藥師少女的獨語' },
+        { id: 5, path: 'image/home/no5.jpg', title: '神隱少女' },
+        { id: 6, path: 'image/home/no6.jpg', title: '名偵探柯南Ｘ迷宮的十字路' },
+        { id: 7, path: 'image/home/no7.jpg', title: '戀空' },
+        { id: 8, path: 'image/home/no8.jpg', title: '霍爾的移動城堡' },
+        { id: 9, path: 'image/home/no9.jpg', title: '海的開始' },
+        { id: 10, path: 'image/home/no10.jpg', title: '陳情令' },
+        { id: 11, path: 'image/home/no11.jpg', title: '機智醫生生活' },
+        { id: 12, path: 'image/home/no12.jpg', title: '還魂2' },
     ];
 
-    const handleImageClick = (movie) => {
-        setSelectedImage(movie);
+    const handleMovieClick = (movie) => {
+        setSelectedMovie(movie);
     };
 
     const handleModalClose = () => {
-        setSelectedImage(null);
+        setSelectedMovie(null);
     };
 
     return (
@@ -36,43 +37,42 @@ const MovieSlider = () => {
             <Swiper
                 modules={[Navigation]}
                 slidesPerView={7}
-                spaceBetween={40}
+                spaceBetween={50}
                 navigation={true}
                 allowTouchMove={false}
                 className={Style.movieSwiper}
+                breakpoints={{
+                    600: {
+                        slidesPerView: 4,
+                        spaceBetween: 12
+                    },
+                    960: {
+                        slidesPerView: 5,
+                        spaceBetween: 14
+                    },
+                    1280: {
+                        slidesPerView: 6,
+                        spaceBetween: 16
+                    }
+                }}
             >
                 {movies.map((movie, index) => (
                     <SwiperSlide className={Style.movieSliderItem} key={movie.id}>
-                        <button 
-                            className={Style.imageButton}
-                            onClick={() => handleImageClick(movie)}
-                        >
-                            <div className={Style.numberBadge}>{index + 1}</div>
-                            <img 
-                                src={movie.path} 
-                                alt={movie.title} 
-                                className={Style.movieSliderImage} 
-                            />
-                        </button>
+                        <MovieCard
+                            movie={movie}
+                            index={index}
+                            onClick={handleMovieClick}
+                        />
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            {/* 彈出視窗 */}
-            {selectedImage && (
-                <div className={Style.modal} onClick={handleModalClose}>
-                    <div className={Style.modalContent} onClick={e => e.stopPropagation()}>
-                        <button className={Style.closeButton} onClick={handleModalClose}>
-                            ✕
-                        </button>
-                        <img 
-                            src={selectedImage.path} 
-                            alt={selectedImage.title} 
-                            className={Style.modalImage} 
-                        />
-                        <h2 className={Style.modalTitle}>{selectedImage.title}</h2>
-                    </div>
-                </div>
+            
+            {selectedMovie && (
+                <MovieModal
+                    movie={selectedMovie}
+                    onClose={handleModalClose}
+                />
             )}
         </div>
     );

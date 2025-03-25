@@ -1,4 +1,9 @@
 .middlePart {
-    padding: 0 5rem;
+    padding: 0 9.25rem;
 }
 
+@media (max-width: 1280px) {
+    .middlePart {
+        padding: 0 5rem;
+    }
+}
