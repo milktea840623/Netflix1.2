@@ -8,7 +8,7 @@ import MemberPage from './pages/Member/Member.jsx';
 import VideoPreviewPage from './pages/VideoPreview/VideoPreview.jsx';
 import VideoPlayerPage from './pages/VideoPlayer/VideoPlayer.jsx';
 import RegisterPage from './pages/Register/Register.jsx';
-
+import LoginHelpPage from './pages/LoginHelp/LoginHelp.jsx';
 
 const App =() => {
   return (
@@ -21,6 +21,7 @@ const App =() => {
         <Route path="/member" element={<MemberPage />} />
         <Route path="/video-preview" element={<VideoPreviewPage />} />
         <Route path="/video-player" element={<VideoPlayerPage />} />
+        <Route path="/loginHelp" element={<LoginHelpPage />} />
       </Routes>
   );
 } 

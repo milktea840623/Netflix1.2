@@ -32,6 +32,7 @@
 
 .logoText {
     display: block; /* 默認顯示文字 */
+    user-select: none;
 }
 
 .logoImage {
