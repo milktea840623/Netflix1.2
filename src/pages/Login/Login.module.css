@@ -23,8 +23,7 @@
 
 .loginHeader {
     padding: 24px 48px;
-    margin: 0 107px;
-    width: 100%;
+    margin-left: 107px;
     box-sizing: border-box;
     position: relative;
     z-index: 2;
@@ -42,14 +41,17 @@
 
 .logoText {
     color: #e50914;
-    font-size: 2.5rem;     /* 調小字體大小 */
+    font-size: 2.5rem;
+    /* 調小字體大小 */
     font-weight: bold;
     display: block;
     width: 100%;
-    line-height: 32px;   /* 配合字體大小調整 */
+    line-height: 32px;
+    /* 配合字體大小調整 */
     box-sizing: border-box;
     user-select: none;
-    letter-spacing: -1px; /* 調整字間距 */
+    letter-spacing: -1px;
+    /* 調整字間距 */
 }
 
 .logoImage {
@@ -63,16 +65,16 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 322px;
 }
 
 .loginBody {
     width: 450px;
-    height: 709px;
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 2;
-    margin: 0 auto;
+    margin: 0 auto 48px;
     padding: 0 32px;
     max-width: 450px;
     width: 100%;
@@ -85,7 +87,7 @@
     display: flex;
     flex-direction: column;
     min-height: 515px;
-    padding: 30px 68px 40px;
+    padding: 30px 68px 92px;
 }
 
 .formTitle {
@@ -93,12 +95,6 @@
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 28px;
-}
-
-.loginForm {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
 
 .formGroup {
@@ -110,11 +106,12 @@
     border-radius: 5px;
     border: 1px solid #737373;
     color: #fff;
-    height: 50px;
-    line-height: 50px;
+    height: 56px;
+    line-height: 56px;
     padding-left: 10px;
     width: 100%;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .formInput::placeholder {
@@ -147,8 +144,8 @@
 
 .divider {
     color: #737373;
-    font-size: 14px;
-    margin: 8px 0;
+    font-size: 16px;
+    margin: 0;
     text-align: center;
     position: relative;
 }
@@ -168,35 +165,45 @@
 
 .rememberMeCheckbox {
     margin-right: 8px;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
 }
 
+.rememberMeText {
+    font-size: 16px;
+}
 
 .forgotPassword {
-    color: #b3b3b3;
+    color: rgb(255, 255, 255);
     font-size: 16px;
-    text-decoration: none;
     text-align: center;
     cursor: pointer;
 }
 
 .forgotPasswordLink,
-.forgotPasswordLink:link,    /* 未訪問的連結 */
-.forgotPasswordLink:visited, /* 已訪問的連結 */
-.forgotPasswordLink:hover,   /* 滑鼠懸停 */
-.forgotPasswordLink:active { /* 點擊時 */
-    color: #b3b3b3;
+.forgotPasswordLink:link,
+/* 未訪問的連結 */
+.forgotPasswordLink:visited,
+/* 已訪問的連結 */
+.forgotPasswordLink:hover,
+/* 滑鼠懸停 */
+.forgotPasswordLink:active {
+    /* 點擊時 */
+    color: rgb(255, 255, 255);
     font-size: 16px;
 }
+
 .forgotPassword:hover {
     text-decoration: underline;
 }
 
 .loginCodeText {
     color: #8c8c8c;
-    font-size: 13px;
-    margin: -8px 0 16px;
+    font-size: 14px;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .formFooter {
@@ -224,8 +231,8 @@
 
 .captchaText {
     color: #8c8c8c;
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 0.8125rem;
+    line-height: 1.8;
 }
 
 .learnMoreBtn {
@@ -251,18 +258,164 @@
     text-decoration: underline;
 }
 
-@media (max-width: 740px) {
-    .loginFormContainer {
-        padding: 60px 40px;
+.loginFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #000;
+    z-index: 2;
+}
+
+.footerContent {
+    width: 80vw;
+    padding: 0 48px;
+}
+
+.contactUs {
+    width: 100%;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.contactUs h5 {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.contactUsLink {
+    text-decoration: none;
+}
+
+.contactUs a {
+    color: #737373;
+    text-decoration-color: white;
+}
+
+.information {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.language {
+    position: relative;
+    background: transparent;
+    color: #737373;
+    font-size: 16px;
+    border: 1px solid #737373;
+    border-radius: 2px;
+    padding: 0;
+    max-width: 120px;
+    align-self: flex-start;
+}
+
+.selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 4px 20px 4px 10px;
+}
+
+.languageIconBlock {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.languageIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.languageSelect {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #737373;
+    padding: 4px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+.arrowIcon {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: #737373;
+}
+
+.footerButton {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+
+.footerButton li {
+    text-align: left;
+}
+
+.footerButton li button {
+    background: none;
+    border: none;
+    color: #737373;
+    font-size: 16px;
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+    .loginHeader {
+        margin-left: 0;
+    }
+
+    .footerContent {
+        width: 90vw;
     }
 }
 
-@media (max-width: 500px) {
-    .loginFormContainer {
-        padding: 40px 20px;
+@media (max-width: 960px) {
+    .logo {
+        width: 89px;
+        height: 24px;
     }
 
-    .formTitle {
-        font-size: 28px;
+    .loginHeader {
+        padding: 24px 32px;
+    }
+
+    .logoText {
+        width: 89px;
+        height: 24px;
+        font-size: 1.75rem;
+        line-height: 24px;
+        letter-spacing: -1px;
+    }
+
+    .footerButton {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .loginContainer {
+        background-image: none;  /* 移除背景圖片 */
+        background-color: #000;  /* 保持純黑背景 */
+    }
+
+    .loginContainer:before {
+        background-color: transparent;  /* 移除遮罩層 */
+    }
+
+    .loginFormContainer {
+        padding: 0
     }
 }

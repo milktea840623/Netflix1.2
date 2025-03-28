@@ -100,7 +100,7 @@ const Login = () => {
                         <div className={Style.formHelpers}>
                             <label className={Style.rememberMe}>
                                 <input type="checkbox" className={Style.rememberMeCheckbox} />
-                                <span>記住我</span>
+                                <span className={Style.rememberMeText}>記住我</span>
                             </label>
                         </div>
                     </form>
@@ -136,7 +136,41 @@ const Login = () => {
                 </div>
             </div>
             <div className={Style.loginFooter}>
-
+            <div className={Style.footerContent}>
+                <div className={Style.contactUs}>
+                    <Link to="/contactUs" className={Style.contactUsLink}>
+                        <h5>
+                            有疑問嗎？請聯絡我們。
+                        </h5>
+                    </Link>
+                </div>
+                <div className={Style.information}>
+                        <ul className={Style.footerButton}>
+                            <li><button>常見問題</button></li>
+                            <li><button>說明中心</button></li>
+                            <li><button>使用條款</button></li>
+                            <li><button>隱私權</button></li>
+                            <li><button>Cookie 設定</button></li>
+                            <li><button>企業資訊</button></li>
+                        </ul>
+                    </div>
+                    <div className={Style.language}>
+                        <div className={Style.selectWrapper}>
+                            <div className={Style.languageIconBlock}>
+                                <img src="/image/language.png" alt="language" className={Style.languageIcon} />
+                            </div>
+                            <select className={Style.languageSelect}>
+                                <option value="zh-TW">中文</option>
+                                <option value="en-US">English</option>
+                            </select>
+                            <div className={Style.arrowIcon}>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 11L3 6h10l-5 5z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

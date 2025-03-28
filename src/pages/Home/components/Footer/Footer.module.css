@@ -202,31 +202,6 @@
     color: #737373;
 }
 
-.loginButton {
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-}
-
-/* 設定連結的各種狀態樣式 */
-.loginButton:link,      /* 未訪問的連結 */
-.loginButton:visited {  /* 已訪問的連結 */
-    color: black;
-}
-
-.loginButton:hover {    /* 滑鼠懸停 */
-    background-color: rgba(255, 255, 255, 0.85);
-}
-
-.loginButton:active {   /* 點擊時 */
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
 .footerButton {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -249,12 +224,6 @@
     padding: 0;
     cursor: pointer;
 }
-
-.footerButton li button:hover {
-    text-decoration: underline;
-    text-decoration-color: white;
-}
-
 /* 來源聲明樣式 */
 .source {
     width: 100%;
